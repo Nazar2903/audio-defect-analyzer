@@ -1,0 +1,53 @@
+.player-wave-wrapper {
+  position: relative;
+  min-height: 110px;
+  padding: 0.5rem;
+  background: var(--color-surface-muted);
+  border-radius: var(--radius-small);
+}
+
+.player-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.player-error {
+  color: var(--color-danger);
+}
+
+.player-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.player-toggle {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.player-time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.player-hint {
+  margin-left: auto;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .player-hint {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+}

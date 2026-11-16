@@ -1,0 +1,37 @@
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.severity-low {
+  background: var(--color-surface-muted);
+  color: var(--color-text-muted);
+}
+
+.severity-medium {
+  background: rgba(240, 173, 78, 0.18);
+  color: var(--color-warning);
+}
+
+.severity-high {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.defect-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.defect-type-dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}

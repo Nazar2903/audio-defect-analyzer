@@ -1,0 +1,117 @@
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.header-brand:hover {
+  color: var(--color-text);
+}
+
+.header-brand .logo {
+  color: var(--color-primary);
+}
+
+.header-nav {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.header-link {
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-small);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.header-link:hover {
+  background: var(--color-surface-muted);
+  color: var(--color-text);
+}
+
+.header-link.active {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.header-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  cursor: pointer;
+}
+
+.header-burger span {
+  display: block;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.header-burger[aria-expanded='true'] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header-burger[aria-expanded='true'] span:nth-child(2) {
+  opacity: 0;
+}
+
+.header-burger[aria-expanded='true'] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .header-burger {
+    display: flex;
+  }
+
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 0.75rem;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-card);
+  }
+
+  .header-nav.is-open {
+    display: flex;
+  }
+
+  .header-link {
+    padding: 0.75rem 1rem;
+  }
+}

@@ -1,0 +1,95 @@
+.defect-table-wrapper {
+  overflow-x: auto;
+}
+
+.defect-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.defect-table th,
+.defect-table td {
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.defect-table th {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+}
+
+.defect-table tbody tr:hover {
+  background: var(--color-surface-muted);
+}
+
+.defect-time-button {
+  padding: 0.2rem 0.5rem;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  border: none;
+  border-radius: 6px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.defect-time-button:hover {
+  filter: brightness(0.95);
+}
+
+.defect-tip summary {
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.defect-tip p {
+  max-width: 320px;
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .defect-table thead {
+    display: none;
+  }
+
+  .defect-table,
+  .defect-table tbody,
+  .defect-table tr,
+  .defect-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .defect-table tr {
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+  }
+
+  .defect-table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.4rem 0;
+    border-bottom: none;
+  }
+
+  .defect-table td::before {
+    content: attr(data-label);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .defect-tip {
+    text-align: right;
+  }
+}

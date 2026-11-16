@@ -1,0 +1,41 @@
+.settings-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.settings-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.settings-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  cursor: pointer;
+}
+
+.settings-option:has(input:checked) {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.settings-option input {
+  accent-color: var(--color-primary);
+}
+
+.settings-field {
+  max-width: 360px;
+}
+
+.settings-help {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+}
